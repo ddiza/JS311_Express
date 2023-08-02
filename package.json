@@ -1,18 +1,14 @@
 {
   "name": "js311_express",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "nodemon index.js",
+    "dev" : "nodemon index.js"
   },
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "mysql" : "2.18.1"
   },
   "devDependencies": {
     "nodemon": "3.0.1"
-  },
-  "description": "Create a backend that is always running\r listening for requests",
-  "version": "1.0.0",
-  "main": "main.js",
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  }
 }

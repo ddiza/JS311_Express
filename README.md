@@ -102,3 +102,30 @@ Math.randon() // generates a number between 0 and 1
 567984.65464654654
 -> Mat.floor(567984.65464654654) -> 567984
 
+///////////////////////
+CLASS 4
+
+Orgnizing code, files, folders
+  Machine doesn't care, easier to write less buggy code,
+  easier to follow what's going on for humans(team)
+
+  Folder structure is a design choice.
+  MVC architecture is most common
+  model-view-controller
+
+  Routes
+  - Where we define the routes our app supports
+  - "Contract" for what clients interact with
+
+  Controllers
+  - Code that implements the "contract"
+  - Code that executes the logic that honors the contract
+
+  Model
+  - This is the code that handles the data layer
+
+Access is the sam:
+      EXPORT the things you want to use
+      REQUIRE where you want to use them
+      In express, you can export only one thing
+         but you can export multiple things in one object.
