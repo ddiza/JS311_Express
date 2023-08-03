@@ -11,9 +11,7 @@ const postTodo = (req,res) => {
     newItem.completed = false;
     newItem.id= randomInt();
 
-    // send to database array
-    db.push(newItem);
-
+    db.push(newItem); // send to database array
     res.json(newItem);
 }
 
@@ -26,19 +24,17 @@ const getAllTodos = (req, res) =>{
 
 
 const getById = (req, res) => {
-    let myId = req.params.id;
-    let description = req.body.description; 
-    let completed = req.body.completed == true;
+     
+     let myId = req.params.id; // Get the id from the route
  
-    let matchingItem = db.find( (item, index) => {
-       return item.id == myId;
-    })
- 
-    if(matchingItem) {
-       matchingItem.description = description;
-       matchingItem.completed = completed;
-       res.json(matchingItem);
-    } else {
+   // Find that todo in our 'database' that matches the route id
+   let matchingItem = db.find((item, index) => {
+      return item.id == myId;
+   })
+
+   if(matchingItem) {
+      res.json(matchingItem);
+   } else {
        res.send("Invalid Id")
     }
  
@@ -76,8 +72,7 @@ const updateTodo = (req, res) => {
        res.json(matchingItem);
     } else {
        res.send("Invalid Id")
-    }
- 
+    } 
  }
 
  const randomInt = () => {
