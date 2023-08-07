@@ -53,7 +53,7 @@ Query Parameters (query prams):
 
 We're going to build our own todo app with our own api interface and our own data
 
-tod object should have:
+todo object should have:
 - id : id of the todo item
 - description: what the todo is
 - completed : true or false
